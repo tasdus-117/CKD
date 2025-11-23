@@ -9,7 +9,7 @@ except FileNotFoundError:
     st.error("Chưa thấy file 'ckd_pipeline.pkl'. Vui lòng chạy file train_pipeline.py trước.")
     st.stop()
 
-st.title("🔬 Demo Dự Đoán Bệnh Thận (Pipeline)")
+st.title("🔬 Demo Dự Đoán Bệnh Thận")
 st.caption("Sử dụng Sklearn Pipeline: Auto Impute -> Scale -> OneHot -> Predict")
 
 with st.form("input_form"):
@@ -81,4 +81,5 @@ if submit:
             st.write(f"Độ tin cậy: {proba[0][0] * 100:.2f}%")
 
     except Exception as e:
+
         st.error(f"Có lỗi xảy ra trong pipeline: {e}")
